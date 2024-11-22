@@ -20,7 +20,7 @@
   // 初始化 Google 按鈕
   window.onload = function () {
     google.accounts.id.initialize({
-      client_id: "YOUR_CLIENT_ID",
+      client_id: "912148148886-m74apbsn2dokgrafs9mto26en07memc2.apps.googleusercontent.com",
       callback: handleCredentialResponse
     });
 
