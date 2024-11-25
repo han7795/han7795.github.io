@@ -26,6 +26,12 @@ export default {
     this.initializeGoogleLogin();
   },
   methods: {
+    logout() {
+    if (window.google) {
+      window.google.accounts.id.disableAutoSelect(); // 禁用自动选择已登录的账户
+      console.log("User logged out.");
+    }
+  },
     initializeGoogleLogin() {
       const scriptId = "google-login-script";
 
