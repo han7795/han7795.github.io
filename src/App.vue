@@ -4,7 +4,7 @@ import google from './components/google.vue';
 export default {
   name: "App",
   components: {
-    GoogleLogin,
+    google,
   },
 };
 </script>
