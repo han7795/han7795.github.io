@@ -25,7 +25,7 @@ export default {
     GoogleLogin,
   },
   setup() {
-    const googleClientId = "YOUR_GOOGLE_CLIENT_ID"; // 替换为你的 Google Client ID
+    const googleClientId = "912148148886-m74apbsn2dokgrafs9mto26en07memc2.apps.googleusercontent.com"; // 替换为你的 Google Client ID
     const isLoggedIn = ref(false);
     const userInfo = ref({});
 
