@@ -1,5 +1,12 @@
-<script setup>
-import google from './components/google.vue'
+<script>
+import google from './components/google.vue';
+
+export default {
+  name: "App",
+  components: {
+    GoogleLogin,
+  },
+};
 </script>
 
 <template>
