@@ -1,31 +1,35 @@
+<template>
+  <div>
+    <h1>Google Login Example</h1>
+    <GoogleLoginButton
+      :client-id="googleClientId"
+      :on-success="handleSuccess"
+      :on-failure="handleFailure"
+    />
+  </div>
+</template>
+
 <script>
-import google from './components/google.vue';
+import GoogleLoginButton from "./components/GoogleLoginButton.vue";
 
 export default {
   name: "App",
   components: {
-    google,
+    GoogleLoginButton,
+  },
+  data() {
+    return {
+      googleClientId: process.env.VUE_APP_GOOGLE_CLIENT_ID, // 環境變數中的 Google 客戶端 ID
+    };
+  },
+  methods: {
+    handleSuccess(response) {
+      console.log("Login Successful:", response.credential);
+      // 在這裡處理成功邏輯，例如發送 token 到後端進行驗證
+    },
+    handleFailure(error) {
+      console.error("Login Failed:", error);
+    },
   },
 };
 </script>
-
-<template>
-  <div>
-    <google />
-  </div>
-</template>
-
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
